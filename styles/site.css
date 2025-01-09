@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 15px 20px;
+    margin-bottom: 0;
+}
+
+.name {
+    font-size: 24px;
+    color: white;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hamburger-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    padding: 1rem;
+    margin-top: 0;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 10rem;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.Course, .Accra {
+    flex: 1;
+    min-width: 50%;
+    padding: 10px;
+}
+
+.Course-sec, .Accra-sec, .website-sec {
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.website {
+    width: 100%;
+    padding: 10px;
+}
+
+.container h2 {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+figure {
+    margin: 0;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+figure img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+#currentyear {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#lastModified {
+    font-size: 1em;
+    font-style: italic;
+    color: #aaa;
+}
+
+#currentyear:hover {
+    color: #555;
+}
+/* General styling */
+.course-card {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for completed courses */
+.completed {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+/* Styling for incomplete courses */
+.incomplete {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+/* For total credits section */
+#total-credits {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Additional styles for course cards */
+.course-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.course-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
