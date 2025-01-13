@@ -20,15 +20,6 @@
         <div class="logo">
             <img src="images/hoooer_pic.jpg" alt="Logo">
         </div>
-
-
-        <div class="hamburger-container">
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
     </header>
     <div>
         <nav class="nav-links">
@@ -40,6 +31,13 @@
                 </li>
             </ul>
         </nav>
+        <div class="hamburger-container">
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </div>
 
     <main>
@@ -63,12 +61,13 @@
 
             <div class="website">
                 <h2>Web and Computer Programming Certificate</h2>
+                <div id="filter-buttons">
+                    <button id="all-courses" class="filter-button">All Courses</button>
+                    <button id="wdd-courses" class="filter-button">WDD Courses</button>
+                    <button id="cse-courses" class="filter-button">CSE Courses</button>
+                </div>
                 <section class="website-sec">
-                    <div id="filter-buttons">
-                        <button id="all-courses" class="filter-button">All Courses</button>
-                        <button id="wdd-courses" class="filter-button">WDD Courses</button>
-                        <button id="cse-courses" class="filter-button">CSE Courses</button>
-                    </div>
+                    
                     <div id="total-credits"></div>
                     <div id="course-container"></div>
                 </section>

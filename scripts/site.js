@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalCreditsContainer = document.getElementById("total-credits");
     const filterButtonsContainer = document.getElementById("filter-buttons");
 
+
+        // for the date and time 
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = `@ ${currentYear} Isaac Hooper Ghana`;
+    const lastModified = document.lastModified;
+    document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
+
     // Course data
     const courses = [
         {

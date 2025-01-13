@@ -103,7 +103,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 0.5rem;
     transition: background 0.3s ease;
     font-size: 1.2rem;
