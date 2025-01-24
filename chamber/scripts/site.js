@@ -1,18 +1,25 @@
-const hamburger = document.querySelector('.hamburger-container');
+const hamburger = document.querySelector('.hamburger'); // FIXED: Selected `.hamburger` instead of `.hamburger-container`
 const navigation = document.querySelector('.navigation');
-const toggleButton = document.getElementById("toggleView"); 
+const toggleButton = document.getElementById("toggleView");
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navigation.classList.toggle('active');
 });
 
-// current year and last modified dates are displayed
+// Highlight the active link in the navigation
+document.querySelectorAll(".navigation a").forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+    }
+});
+
+// Display current year and last modified date
 document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = "Last modified: " + document.lastModified;
+document.getElementById('lastmodified').textContent = "Last modified: " + document.lastModified;
 
 document.addEventListener("DOMContentLoaded", async function () {
-    const membersContainer = document.getElementById("membersContainer");
+    const memberscontainer = document.getElementById("memberscontainer");
 
     async function fetchMembers() {
         try {
@@ -25,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     function displayMembers(members) {
-        membersContainer.innerHTML = "";
+        memberscontainer.innerHTML = "";
         members.forEach(member => {
             const memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
@@ -40,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <p>${member.description}</p>
             `;
 
-            membersContainer.appendChild(memberCard);
+            memberscontainer.appendChild(memberCard);
         });
     }
 
@@ -53,11 +60,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-   
+    // Toggle between grid and list view
     if (toggleButton) {
         toggleButton.addEventListener("click", () => {
-            membersContainer.classList.toggle("grid-view");
-            membersContainer.classList.toggle("list-view");
+            memberscontainer.classList.toggle("grid-view");
+            memberscontainer.classList.toggle("list-view");
         });
     } else {
         console.error("Toggle button not found. Make sure it exists in the HTML.");
