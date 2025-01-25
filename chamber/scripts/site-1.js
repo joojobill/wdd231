@@ -13,9 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('currentyear').textContent = new Date().getFullYear();
     document.getElementById('lastmodified').textContent = "Last modified: " + document.lastModified;
 
-    // ======================
-    // ✅ Weather API (Unchanged)
-    // ======================
+    //  Weather API
+
     const mytown = document.querySelector("#town");
     const mydescription = document.querySelector("#description");
     const mygraphic = document.querySelector("#graphic");
@@ -50,48 +49,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     apiFetch();
 
-    // ======================
-    // ✅ Fetch Chamber Members (Fixed)
-    // ======================
+    //  Fetch Chamber Members
+
     async function fetchMembers() {
         try {
-            const response = await fetch('data/members.json'); // Make sure this file exists in the correct location
+            const response = await fetch('data/members.json'); 
             if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
             
             const members = await response.json();
-            console.log("✅ Members Fetched:", members); // Debugging: Check data
+            console.log(" Members Fetched:", members);
             
             displaySpotlights(members);
         } catch (error) {
-            console.error("❌ Error fetching members:", error);
+            console.error(" Error fetching members:", error);
         }
     }
 
     function displaySpotlights(members) {
         const spotlightContainer = document.querySelector('.other-info');
 
-        // ✅ Ensure the container exists
+        
         if (!spotlightContainer) {
-            console.error("❌ Error: .other-info div not found!");
+            console.error(" Error: .other-info div not found!");
             return;
         }
 
         spotlightContainer.innerHTML = "<h2>Featured Chamber Members</h2>";
 
-        // ✅ Filter only Gold (3) & Silver (2) members
         const eligibleMembers = members.filter(member => member.MembershipLevel === 3 || member.MembershipLevel === 2);
 
-        // ✅ Check if eligible members exist
         if (eligibleMembers.length === 0) {
             spotlightContainer.innerHTML += "<p>No Gold or Silver members found.</p>";
             return;
         }
 
-        // ✅ Randomly select 2 or 3 members
+        //  Randomly select 2 or 3 members
         const shuffled = eligibleMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
 
         shuffled.forEach(member => {
-            console.log("✅ Displaying Member:", member.name); // Debugging
+            console.log(" Displaying Member:", member.name);
 
             const memberCard = document.createElement('div');
             memberCard.classList.add('member-card');
