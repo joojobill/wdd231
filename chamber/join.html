@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta property="og:title" content="chamber home page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/favicon-32x32">
+    <meta property="og:url" content="index.html">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/forms.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/thanks.js" defer></script>
+    
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo-name">
+            <div class="logo">
+                <img src="images/hoooer_pic.jpg" alt="logo">
+            </div>
+            <div>
+                <h1 class="name"> Isaac Hooper</h1>
+            </div>
+        </div>
+        <div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Chamber</a></li>
+                    <li><a href="">Github Profile</a></li>
+                    <li><a href="">LinkedIn Profile</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <div class="hamburger-container">
+            <button class="hamburger" aria-label="toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="container">
+        
+        
+            <form action="thankyou.html" method="get" class="form">
+                <h2>Membership registration</h2>
+                
+                <div>
+                    <label for="fristname">Frist Name</label>
+                    <input name="fristname" id="fristname" type="text" autocomplete="fristname">
+
+                    <label for="lastname">Last Name</label>
+                    <input name="lastname" id="lastname" type="text" autocomplete="lastname">
+
+                    <label for="organizational-title">Organizational Title</label>
+                    <input name="organizational-title" id="organizational-title" type="text" autocomplete="organizational-title">
+
+                    <label for="emailaddress">Email Address</label>
+                    <input name="emailaddress" id="emailaddress" type="text" placeholder="index@gmail.com" autocomplete="off">
+
+                    <label for="phonenumber">Phone number</label>
+                    <input name="phonenumber" id="phonenumber" type="tel"  placeholder="(+233987654321)" autocomplete="on">
+
+                    <label for="businessname">Business Name</label>
+                    <input name="businessname" id="businessname" type="text" autocomplete="businessname">
+
+                    <label for="membershiplevel">Membership level </label>
+                    <select id="membershiplevel" name="membershiplevel">
+                        <option value="npmembership">NP Membership</option>
+                        <option value="silvermembership">Silver Membership</option>
+                        <option value="bronzemembership">Bronze Membership</option>
+                        <option value="goldmembership">Gold Membership</option> 
+                    </select>
+                    <label for="description">Business description</label>
+                    <textarea id="description" rows="5" cols="50">write your description here:</textarea>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button id="submit" type="submit">submit</button> 
+
+                </div>
+
+            </form>
+
+            <div class="membership-cards">
+                <div class="card" data-level="1">
+                    <h3>Memeber</h3>
+                    <p>Basic access to event and resources.</p>
+                    <a href="#modal1" class="modal-link">Learn More</a>
+                </div>
+                <div class="card" data-level="2">
+                    <h3>Seliver</h3>
+                    <p>Additional training and event discounts.</p>
+                    <a href="#modal2" class="modal-link">Learn More</a>
+                </div>
+                <div  class="card" data-level="3">
+                    <h3>Gold</h3>
+                    <p>Spotlight advertising and VIP event access.</p>
+                    <a href="#modal3" class="modal-link">Learn More</a>
+                </div>
+                <div class="card" data-level="4">
+                    <h3>Platinum</h3>
+                    <p>Exclusive benefits and personalized support</p>
+                    <a href="#modal4" class="modal-link">Learn More</a>
+                </div>
+            </div>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Member level</h2>
+                    <ul>
+                        <li>Access to basic events</li>
+                        <li>Resource library access</li>
+                        <li>Networking opportunities</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Silver benefits</h2>
+                    <ul>
+                        <li>All Member benefits</li>
+                        <li>Training sessions</li>
+                        <li>10% event discounts</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Gold benefits</h2>
+                    <ul>
+                        <li>All Silver benefits</li>
+                        <li>Spotlight advertising</li>
+                        <li>VIP event access</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Platinum benefits</h2>
+                    <ul>
+                        <li>All Gold benefits</li>
+                        <li>Personalized support</li>
+                        <li>Exclusive events</li>
+                    </ul>
+                </div>
+            </div>
+    
+         
+        </section>
+        
+    </main>
+    <footer>
+        <p>@<span id="currentyear"></span>, Isaac Hooper WDD 231</p>
+        <p><span id="lastmodified"></span></p>
+
+    </footer>
+    
+</body>
+</html>

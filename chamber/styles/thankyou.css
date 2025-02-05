@@ -1,0 +1,30 @@
+.hero {
+    position: relative;
+    min-height: 50vh;
+    background: url('https://blog.tubikstudio.com/wp-content/uploads/2018/11/graphic-design-case-study.jpg') center/cover no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50;
+}
+
+.hero .thanks {
+    background: greenyellow;
+    padding: 15px 25px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.thanks {
+    text-align: center;
+}
+
+.thanks h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+

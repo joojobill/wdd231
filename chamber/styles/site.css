@@ -99,7 +99,7 @@ html, body {
 .hero {
     position: relative;
     min-height: 50vh;
-    background: url('https://blog.tubikstudio.com/wp-content/uploads/2018/11/graphic-design-case-study.jpg') center/cover no-repeat;
+    background: url('https://blog.tubikstudio.com/wp-content/uploads/2018/11/graphic-design-case-study.jpg') center/cover no-repeat !important;
     display: flex;
     justify-content: center;
     align-items: center;
