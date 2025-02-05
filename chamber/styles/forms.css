@@ -106,7 +106,7 @@ html, body {
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(red, green, blue, alpha);
+    box-shadow: none;
     font-family: arial, sans-serif;
 }
 
@@ -122,6 +122,7 @@ html, body {
 /*input and textareas styling */
 .form input[type="text"],
 .form input[type="tel"],
+.form input[type="email"],
 .form select,
 .form textarea {
     width: 100%;
@@ -134,6 +135,7 @@ html, body {
 }
 .form input[type="text"]:focus,
 .form input[type="tel"]:focus,
+.form input[type="email"]:focus,
 .form select:focus,
 .form textarea:focus {
     border-color: #007bff;
