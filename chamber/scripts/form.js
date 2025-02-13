@@ -1,4 +1,4 @@
-const hamburger = document.querySelector('.hamburger'); // FIXED: Selected `.hamburger` instead of `.hamburger-container`
+const hamburger = document.querySelector('.hamburger'); //  Selected `.hamburger` instead of `.hamburger-container`
 const navigation = document.querySelector('.navigation');
 const toggleButton = document.getElementById("toggleView");
 
@@ -97,5 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="info"><label>Membership Level:</label> ${membershipLevel}</div>
       <div class="info"><label>Business Description:</label> ${description}</div>
       <div class="info"><label>Timestamp:</label> ${timestamp}</div>
-  `;
-  
+} `;

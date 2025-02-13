@@ -1,0 +1,110 @@
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cards-container {
+    display: grid; /* Use grid instead of flex */
+    gap: 15px;
+    padding: 10px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Small Screens (320px to 640px) */
+@media (min-width: 320px) and (max-width: 640px) {
+    .cards-container {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screens (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards-container {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+    .cards-container {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-rows: repeat(4, auto); /* Four rows */
+    }
+}
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+#visit-message {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+/* Assign Grid Areas to Cards */
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
