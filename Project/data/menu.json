@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Espresso",
+      "description": "A strong shot of coffee.",
+      "price": 3.50,
+      "image": "images/espresso.jpg"
+    },
+    {
+      "name": "Latte",
+      "description": "Espresso with steamed milk.",
+      "price": 4.50,
+      "image": "images/latte.jpg"
+    },
+    {
+      "name": "Cappuccino",
+      "description": "Espresso with frothy milk.",
+      "price": 4.00,
+      "image": "images/cappuccino.jpg"
+    },
+    {
+      "name": "Croissant",
+      "description": "Freshly baked buttery croissant.",
+      "price": 2.50,
+      "image": "images/croissant.jpg"
+    },
+    {
+      "name": "Blueberry Muffin",
+      "description": "Homemade muffin with fresh blueberries.",
+      "price": 3.00,
+      "image": "images/muffin.jpg"
+    },
+    {
+      "name": "Chocolate Cake",
+      "description": "Rich and decadent chocolate cake.",
+      "price": 5.00,
+      "image": "images/cake.jpg"
+    }
+  ]

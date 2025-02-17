@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Espresso",
+      "description": "A strong shot of coffee.",
+      "price": 3.50
+    },
+    {
+      "name": "Latte",
+      "description": "Espresso with steamed milk.",
+      "price": 4.50
+    },
+    {
+      "name": "Cappuccino",
+      "description": "Espresso with frothy milk.",
+      "price": 4.00
+    }
+  ]
